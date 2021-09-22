@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Discord Compact",
+    "version": "1.0",
+    "description": "Tool for hiding discord sidebar",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://discord.com/*"
+            ],
+            "js": [
+                "compactify.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "commands": {
+        "toggle-compact": {
+            "suggested_key": {
+                "default": "Ctrl+F12"
+            }
+        }
+    }
+}
