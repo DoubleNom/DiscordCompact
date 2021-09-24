@@ -9,7 +9,7 @@
                 "*://discord.com/*"
             ],
             "js": [
-                "compactify.js"
+                "purify.min.js", "compactify.js"
             ]
         }
     ],

@@ -33,6 +33,7 @@ async function addIcon() {
             .then(r => {
                 r.text()
                     .then(html => {
+                        html = DOMPurify.sanitize(html)
                         element.insertAdjacentHTML('beforebegin', html)
                         element.parentNode.firstChild.addEventListener("click", () => doCompact())
                     })
